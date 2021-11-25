@@ -26,20 +26,26 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.red[400],
       ),
       body: Center(
-        //wrap using center widget to centre anything
-        child: Text('Hello',
-            style: TextStyle(
-              fontSize: 40,
-              fontWeight: FontWeight.bold,
-              letterSpacing: 3,
-              color: Colors.indigo[30],
-              fontFamily: 'Inconsolata',
-            )),
-        //use child proprty while nesting
+        child:Image.asset('assets/space-2.jpg')
+        // Image(
+        //   image:AssetImage('assets/space-1.jpg'),
+          // image:NetworkImage('https://images.unsplash.com/photo-1637266047032-31ac3fd14ce2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDQwfGlVSXNuVnRqQjBZfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60'),
+        // ),
+        // wrap using center widget to centre anything
+        // child: Text('Hello',
+        //     style: TextStyle(
+        //       fontSize: 40,
+        //       fontWeight: FontWeight.bold,
+        //       letterSpacing: 3,
+        //       color: Colors.indigo[30],
+        //       fontFamily: 'Inconsolata',
+        //     )),
+
+        // use child proprty while nesting
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        child: Text('Click'),
+        child: Text('Click '),
         backgroundColor: Colors.green,
       ),
     );
