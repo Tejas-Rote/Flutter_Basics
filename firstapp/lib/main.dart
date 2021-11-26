@@ -25,36 +25,83 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.red[400],
       ),
-      body:Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.center,
+      body:Row(
         children: <Widget>[
-          Row(
-            children: <Widget>[  // studio telling to use const with constant containers.
-              Text('Hello, '),
-              Text('World'),
-            ],
+          Expanded(
+            flex: 3,
+              child: Image.asset('assets/space-2.jpg')
+          ),
+          Expanded(
+            flex: 1,
+            child: Container(
+              padding: EdgeInsets.all(30),
+              color: Colors.cyan,
+              child: Text('1'),
+            ),
+          ),
+          Expanded(
+            flex: 1,
+            child: Container(
+              padding: EdgeInsets.all(30),
+              color: Colors.red,
+              child: Text('2'),
+            ),
+          ),
+          Expanded(
+            flex: 1,
+            child: Container(
+              padding: EdgeInsets.all(30),
+              color: Colors.orange,
+              child: Text('3'),
+            ),
           ),
 
-          Container(
-            padding: EdgeInsets.all(20),
-            color: Colors.tealAccent,
-            child: Text('one'),
-          ),
-
-          Container(
-            padding: EdgeInsets.all(30),
-            color: Colors.amber,
-            child: Text('two'),
-          ),
-
-          Container(
-            padding: EdgeInsets.all(40),
-            color: Colors.redAccent[200],
-            child: Text('three'),
-          ),
         ],
       ),
+
+
+
+
+
+
+
+
+
+    //   // ----video-12
+    //
+    //   Column(
+    //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    //     crossAxisAlignment: CrossAxisAlignment.center,
+    //     children: <Widget>[
+    //       Row(
+    //         children: <Widget>[  // studio telling to use const with constant containers.
+    //           Text('Hello, '),
+    //           Text('World'),
+    //         ],
+    //       ),
+    //       Container(
+    //         padding: EdgeInsets.all(20),
+    //         color: Colors.tealAccent,
+    //         child: Text('one'),
+    //       ),
+    //
+    //       Container(
+    //         padding: EdgeInsets.all(30),
+    //         color: Colors.amber,
+    //         child: Text('two'),
+    //       ),
+    //
+    //       Container(
+    //         padding: EdgeInsets.all(40),
+    //         color: Colors.redAccent[200],
+    //         child: Text('three'),
+    //       ),
+    //     ],
+    //   ),
+    // //---
+
+
+
 
     //   // ---- video-11
     //   Row(
