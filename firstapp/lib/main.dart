@@ -25,23 +25,84 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.red[400],
       ),
-      body:
-      //---video-10
-      Padding(
-        padding: EdgeInsets.all(90),
-        child: Text('Hello with padding'),
+      body:Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+          Row(
+            children: <Widget>[  // studio telling to use const with constant containers.
+              Text('Hello, '),
+              Text('World'),
+            ],
+          ),
+
+          Container(
+            padding: EdgeInsets.all(20),
+            color: Colors.tealAccent,
+            child: Text('one'),
+          ),
+
+          Container(
+            padding: EdgeInsets.all(30),
+            color: Colors.amber,
+            child: Text('two'),
+          ),
+
+          Container(
+            padding: EdgeInsets.all(40),
+            color: Colors.redAccent[200],
+            child: Text('three'),
+          ),
+        ],
       ),
 
-      // Container(
-      //   margin: EdgeInsets.all(30.0),
-      //   padding: EdgeInsets.fromLTRB(10, 20, 30, 40),
-      //   // padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
-      //   color:Colors.grey[350],
-      //   child: Text('Hello'),
+    //   // ---- video-11
+    //   Row(
+    //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    //     // mainAxisAlignment: MainAxisAlignment.center,
+    //     // mainAxisAlignment: MainAxisAlignment.spaceAround,
+    //
+    //     // crossAxisAlignment: CrossAxisAlignment.start,
+    //     // crossAxisAlignment: CrossAxisAlignment.end,
+    //     crossAxisAlignment: CrossAxisAlignment.start,
+    //     // crossAxisAlignment: CrossAxisAlignment.stretch,
+    //     children:  <Widget>[ // studio telling to use const with constant containers.
+    //       Text('Hello World'),
+    //       ElevatedButton(
+    //         style: ElevatedButton.styleFrom(
+    //           primary: Colors.amber,
+    //           onPrimary: Colors.black,
+    //         ),
+    //         onPressed: (){},
+    //         child: Text('Click me'),
+    //       ),
+    //       Container(
+    //         color: Colors.tealAccent,
+    //         padding: EdgeInsets.all(20),
+    //         child: Text('Child of container'),
+    //       )
+    //     ],
+    //   ),
+    //
+    // // ---
+
+
+      // //---video-10
+      // Padding(
+      //   padding: EdgeInsets.all(90),
+      //   child: Text('Hello with padding'),
       // ),
-
-
-      // -----
+      //
+      // // Container(
+      // //   margin: EdgeInsets.all(30.0),
+      // //   padding: EdgeInsets.fromLTRB(10, 20, 30, 40),
+      // //   // padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
+      // //   color:Colors.grey[350],
+      // //   child: Text('Hello'),
+      // // ),
+      //
+      //
+      // // -----
 
 
       //--- video-9
