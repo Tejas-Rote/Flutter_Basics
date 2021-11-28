@@ -46,7 +46,7 @@ class _IDcardState extends State<IDcard> {
               ),
             ),
             Divider(
-              height: 60,
+              height: 40,
               color: Colors.red,
 
             ),
