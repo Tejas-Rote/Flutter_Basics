@@ -55,7 +55,7 @@ class _IDcardState extends State<IDcard> {
               style: TextStyle(
                 color:Colors.teal,
                 letterSpacing: 1.5,
-                fontSize: 18,
+                fontSize: 16,
 
               ),
             ),
@@ -75,7 +75,7 @@ class _IDcardState extends State<IDcard> {
               style: TextStyle(
                 color:Colors.teal,
                 letterSpacing: 1.5,
-                fontSize: 18,
+                fontSize: 16,
 
               ),
             ),
