@@ -21,7 +21,6 @@ class _QuoteListState extends State<QuoteList> {
 
 
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

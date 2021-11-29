@@ -17,6 +17,7 @@ class QuoteCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
+
             Text(
               quote.text,
               style: TextStyle(
