@@ -1,10 +1,13 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'quote.dart';
 
 class QuoteCard extends StatelessWidget {
 
   final Quote quote;
-  QuoteCard({required this.quote});
+  final VoidCallback? delete; // told to use void call back?  function instead of just funciton
+  QuoteCard({required this.quote, required this.delete});
 
 
 
@@ -32,6 +35,12 @@ class QuoteCard extends StatelessWidget {
                 fontSize: 16,
                 color: Colors.redAccent,
               ),
+            ),
+            SizedBox(height: 8,),
+            TextButton.icon(
+                onPressed: delete,
+                label: Text('delete quote'),
+                icon: Icon(Icons.delete),
             ),
 
           ],
