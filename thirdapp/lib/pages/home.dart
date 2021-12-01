@@ -14,7 +14,7 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    data = ModalRoute.of(context)?.settings.arguments as Map; // had to add null check or null aware as setting cant be used on null
+    data = data.isNotEmpty ? data:ModalRoute.of(context)?.settings.arguments as Map; // had to add null check or null aware as setting cant be used on null
     // A value of type 'Object?' can't be assigned to a variable of type 'Map<dynamic, dynamic>'. to resolve this had to add as map at the end.
     print(data);
 
@@ -41,10 +41,17 @@ class _HomeState extends State<Home> {
             child: Column(
               children: <Widget>[
                 TextButton.icon(
-                    onPressed: (){
-                      Navigator.pushNamed(
-                          context,
-                          '/location');
+                    onPressed:  () async {
+                      dynamic result = await Navigator.pushNamed(context, '/location');
+                      setState((){
+                        data = {
+                          'time' :result['time'],
+                          'location' : result['location'],
+                          'flag':result['flag'],
+                          'isDaytime' : result['isDaytime']
+
+                };
+                      });
                     },
 
                     icon: Icon(

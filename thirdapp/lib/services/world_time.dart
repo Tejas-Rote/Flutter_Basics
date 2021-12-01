@@ -4,13 +4,14 @@ import 'dart:convert';
 import 'package:intl/intl.dart';
 
 class WorldTime {
-  String? location; // location name of the UI
-  String? time; // time at location
-  String? flag; // url to asset flag
-  String? url;// location url for api endpoint
+  late String location; // location name of the UI
+  late String time; // time at location
+  late String flag; // url to asset flag
+  late String url;// location url for api endpoint
   bool? isDaytime; // true or false if day time or not // says bool can not be not null
 
-  WorldTime({this.location, this.flag, this.url});
+    // had to add late to remove the error that not nullable function must be initialized
+  WorldTime({required this.location,required this.flag,required this.url});
 
   Future<void> getTime() async {
 
