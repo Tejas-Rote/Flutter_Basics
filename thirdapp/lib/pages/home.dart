@@ -7,23 +7,82 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+
+  Map data = {};
+
+
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: Column(
-          children: <Widget>[
-            TextButton.icon(
-                onPressed: (){
-                  Navigator.pushNamed(
-                      context,
-                      '/location');
-                },
-                icon: Icon(Icons.edit_location),
-                label: Text('Edit location')
+    data = ModalRoute.of(context)?.settings.arguments as Map; // had to add null check or null aware as setting cant be used on null
+    // A value of type 'Object?' can't be assigned to a variable of type 'Map<dynamic, dynamic>'. to resolve this had to add as map at the end.
+    print(data);
 
+    //set background
+    String bgImage = data['isDaytime'] ? 'day.png': 'night.png';
+    Color? bgColor =  data['isDaytime'] ? Colors.blue: Colors.indigo[900];
+// could not assign value to Color
+
+
+
+
+    return Scaffold(
+      backgroundColor: bgColor ,
+      body: SafeArea(
+        child: Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/$bgImage'),
+              fit: BoxFit.cover,
             )
-          ],
+          ),
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(0, 120,0, 0),
+            child: Column(
+              children: <Widget>[
+                TextButton.icon(
+                    onPressed: (){
+                      Navigator.pushNamed(
+                          context,
+                          '/location');
+                    },
+
+                    icon: Icon(
+                      Icons.edit_location,
+                      color: Colors.grey[300],),
+                    label: Text('Edit location',
+                      style: TextStyle(
+                        color: Colors.grey[300],
+
+                      ),)
+
+                ),
+                SizedBox(height: 20,),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Text(
+                      data['location'],
+                      style: TextStyle(
+                        fontSize: 28,
+                        letterSpacing: 2,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 20,),
+                Text(
+                  data['time'],
+                  style: TextStyle(
+                    fontSize: 66,
+                    color: Colors.white,
+
+                  ),
+                )
+              ],
+            ),
+          ),
         ),
       ),
     );
